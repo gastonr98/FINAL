@@ -1,0 +1,148 @@
+body {
+    background-color:rgb(245, 250, 252);
+    margin: 0;
+    padding-top: 8rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #077579;
+    color: rgb(245, 250, 252);
+    display: flex;
+    justify-content: space-between;
+    height: 8rem;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15)
+}
+
+.icono {
+    width: 18rem;
+    height: auto;
+}
+
+nav {
+    margin: 2.5rem;
+    display: flex;
+    gap: 1rem;
+    height: 3rem;
+}
+nav a {
+    text-decoration: none;
+    color: #bfeef3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.8rem 1.5rem;
+    transition: .3s;
+    font-weight: bold;
+}
+nav a:hover {
+    background-color: #a0dce4;
+    color: #077579;
+    transform: scale(1.05);
+}
+nav a.activo{
+    background-color: #a0dce4;
+    color: #077579;
+    transform: scale(1.05);
+}
+.hamburguesa{
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 2rem 6rem;
+}
+.cerrar{
+    display: none;
+}
+@media (max-width: 950px){
+
+    nav{
+        display: none;          /* <-- Faltaba esto */
+        width: 250px;
+        height: 100vh;
+        flex-direction: column;
+        position: fixed;
+        margin: 0;
+        box-sizing: border-box;              /* Para que quede debajo del header */
+        right: 0;
+        background-color: #077579;
+        padding: 4rem 1rem 1rem 1rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .cerrar{
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    nav.activo{
+        display: flex;
+    }
+
+    .hamburguesa{
+        display: block;
+    }
+
+}
+
+.seccion{
+    padding: 40px 20px;
+    background-color: #eceaea;
+}
+
+.seccion h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contenedor-cards{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3{
+    margin: 15px 0;
+}
+
+.card p{
+    padding: 0 15px 20px;
+    line-height: 1.5;
+}
+
+
+
+
+
+footer{
+    background-color: #02292b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.redes img{
+    width: 30px;
+    margin: 10px;
+}
